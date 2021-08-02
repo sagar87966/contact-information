@@ -35,7 +35,8 @@ export class ContactListComponent implements OnInit, OnChanges {
   ) {}
 
   ngOnChanges(): void {
-    if (this.renderContacts == true) {
+    if (this.renderContacts) {
+      this.user = undefined;
       this.detailsPageToggle = false;
       this.addContactToggle = true;
     }
@@ -51,6 +52,7 @@ export class ContactListComponent implements OnInit, OnChanges {
     this.addContactToggle = false;
     this.detailsPageToggle = false;
   }
+
   updateUser(user: User) {
     this.user = user;
     this.detailsPageToggle = false;
@@ -58,8 +60,10 @@ export class ContactListComponent implements OnInit, OnChanges {
   }
 
   addContact(): void {
+    this.user=undefined;
     this.addContactToggle = true;
     this.detailsPageToggle = false;
+    this.selectedUser = undefined;
   }
 
   getContacts() {
