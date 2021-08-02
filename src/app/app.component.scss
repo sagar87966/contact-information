@@ -1,0 +1,21 @@
+.container {
+  .brand {
+    margin-left: -1rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .add-contact {
+    position: relative;
+    z-index: 5;
+    position: fixed;
+    display: flex;
+    align-self: flex-end;
+    bottom: 10%;
+    margin-bottom: 68px;
+    .shift-right {
+      position: fixed;
+      right: 0;
+      margin: 2rem 4rem;
+    }
+  }
+}

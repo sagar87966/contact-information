@@ -1,0 +1,61 @@
+<mat-card fxFlexAlign="start">
+  <mat-card-header class="white-text text-center">
+    <mat-card-title>Add Contact</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="px-lg-5 pt-0">
+    <form
+      class="example-form"
+      [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="md-form mt-3">
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>First name</mat-label>
+                <input formControlName="firstname" matInput />
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label> Last Name </mat-label>
+                <input formControlName="lastname" matInput />
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <div>
+          <mat-label>Status</mat-label>
+          &nbsp; &nbsp;
+          <mat-slide-toggle formControlName="status">Active</mat-slide-toggle>
+        </div>
+        <br />
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" placeholder="Johe" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>PhoneNo</mat-label>
+          <span matPrefix>+91 &nbsp;</span>
+          <input
+            type="tel"
+            matInput
+            formControlName="phone"
+            placeholder="1234567890"
+          />
+        </mat-form-field>
+      </div>
+      <button
+        type="submit"
+        [disabled]="!contactForm.valid"
+        mat-raised-button
+        color="primary"
+      >
+        {{ !edit ? "Save" : "Update" }}
+      </button>
+      &nbsp;
+      <button mat-raised-button color="basic" (click)="cancel()">Cancel</button>
+    </form>
+  </mat-card-content>
+</mat-card>

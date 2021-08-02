@@ -1,0 +1,21 @@
+.content {
+  .mat-card {
+    .mat-card-header {
+      justify-content: center;
+    }
+    .inactive-user {
+      color: red;
+    }
+    .active-user {
+      color: rgb(0, 255, 64);
+    }
+    .inline-icon {
+      vertical-align: bottom;
+      font-size: 18px !important;
+    }
+    .status-icon {
+      padding: 1rem;
+      font-size: 3rem;
+    }
+  }
+}
