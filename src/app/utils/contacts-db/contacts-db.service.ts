@@ -110,11 +110,11 @@ export class ContactsDbService implements InMemoryDbService {
     return {contacts};
   }
 
-  // Overrides the genId method to ensure that a hero always has an id.
+  // Overrides the genId method to ensure that a user always has an id.
   // If the contacts array is empty,
   // the method below returns the initial number (11).
-  // if the heroes array is not empty, the method below returns the highest
-  // hero id + 1.
+  // if the users array is not empty, the method below returns the highest
+  // user id + 1.
   genId(contacts: User[]): number {
     return contacts.length > 0 ? Math.max(...contacts.map((user:User|any) => user.id)) + 1 : 11;
   }

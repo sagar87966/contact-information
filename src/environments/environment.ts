@@ -3,12 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
+  production: true,
   GET_USER:'api/contacts',  // URL to web api
   POST_USER:'api/contacts',
   UPDATE_USER:'api/contacts',
-  DELETE_USER:'api/contacts'    
-
+  DELETE_USER:'api/contacts',    
 };
 
 /*

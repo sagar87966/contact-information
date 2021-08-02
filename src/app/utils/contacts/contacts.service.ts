@@ -26,6 +26,7 @@ export class ContactsService {
         catchError(this.handleError<User>('addUser'))
       );
   }
+  
   updateUser(user: User): Observable<any> {
     return this.http.put(environment.UPDATE_USER, user, this.httpOptions).pipe(
       tap((user: any) => console.log(user)),
