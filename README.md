@@ -3,6 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
 
 # Folder Structure
+```
 ├───app
 │   ├───modal
 │   ├───pages
@@ -16,7 +17,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ├───assets
 │   └───icons
 └───environments
-
+```
 ## Prerequisite
  - Clone repositor 
  - Switch to folder
